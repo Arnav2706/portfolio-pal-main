@@ -20,7 +20,7 @@ interface Stock {
 }
 
 const formatCurrency = (n: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
+  new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(n);
 
 const TransactionsPage = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
@@ -146,12 +146,12 @@ const TransactionsPage = () => {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-foreground">Price</label>
+            <label className="mb-1.5 block text-sm font-medium text-foreground">Price (₹)</label>
             <input type="number" min="0" step="0.01" required value={price} onChange={(e) => setPrice(e.target.value)} className={inputClass} placeholder="0.00" />
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-foreground">Brokerage Fee</label>
+            <label className="mb-1.5 block text-sm font-medium text-foreground">Brokerage Fee (₹)</label>
             <input type="number" min="0" step="0.01" value={brokerageFee} onChange={(e) => setBrokerageFee(e.target.value)} className={inputClass} placeholder="0.00" />
           </div>
 

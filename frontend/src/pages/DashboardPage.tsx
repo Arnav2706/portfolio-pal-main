@@ -18,7 +18,7 @@ interface DashboardData {
 }
 
 const formatCurrency = (n: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
+  new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR" }).format(n);
 
 const DashboardPage = () => {
   const [data, setData] = useState<DashboardData | null>(null);
